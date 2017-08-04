@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Priest and Monster</title>
+	<link rel="icon" type="image/icon" href="image/game.ico">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+</head>
+<body>
+	<div class="header">
+			<h2>Timer :</h2>
+			<h2 id="timer"> </h2>
+			<h2>sec</h2>
+	</div>
+	<div id ="game">
+		<img src="http://localhost:8086/image/birds.gif" id="birds" height="100" />
+		<img class="image" src="http://localhost:8086/image/monster.gif" id="m3" onclick="on_click(this.id)" />
+		<img class="image" src="http://localhost:8086/image/monster.gif" id="m2" onclick="on_click(this.id)" />
+		<img class="image" src="http://localhost:8086/image/monster.gif" id="m1" onclick="on_click(this.id)" />
+		<img class="image" src="http://localhost:8086/image/priest.gif" id="p3" onclick="on_click(this.id)" />
+		<img class="image" src="http://localhost:8086/image/priest.gif" id="p2" onclick="on_click(this.id)" />
+		<img class="image" src="http://localhost:8086/image/priest.gif" id="p1"  onclick="on_click(this.id)" />
+		<img src="http://localhost:8086/image/boat.png" id="boat" class="image" style="left: 700px;">
+		
+		<div id="game_over" style="visibility: hidden;">
+			<a href="game.html">
+			<img src="image/game_over.png" class="game_over" id="game_op"/>
+			<span id="title">Replay	</span>
+			</a>
+		</div>
+		<a type="button" id="move_button" onclick="move_button()">MOVE</a>
+	</div>
+	<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>

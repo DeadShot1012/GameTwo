@@ -1,0 +1,93 @@
+body {
+	margin: 0px!important;
+	padding: 0px!important;
+	font-family: 'Indie Flower', cursive;
+	background-color: lightyellow;
+}
+.header{
+	text-align: center;
+	align-items: center;
+	font-size: 25px;
+	display: flex;
+	margin: auto;
+	background-color: darkgreen;
+	height: 50px;
+	box-shadow: 5px 5px 5px black;
+}
+h2 {
+	margin: auto;
+}
+
+#game {
+	display: inline-block;
+	width: 1300px;
+    height: 620px;
+	margin-top: 3px;
+	background-image: url("../image/background.png");
+	background-repeat: no-repeat;;
+	background-position: center;
+	background-size: cover;
+}
+.image {
+	position: absolute;
+	width: 70px;
+	top: 240px;
+    height: 160px;
+    transition: left 0.1s;
+}
+
+.image:hover {
+	width: 80px;
+	height: 170px;
+}
+#boat {
+	width: 190px;
+	height: 70px;
+    top: 335px;
+    transition: left 0.1s;
+}
+
+#move_button {
+	background-color: darkgreen;
+	font-weight: bold;
+	color: white;
+	padding: 7px;
+	position: absolute;
+    top: 550px;
+    left: 661px;
+	border-radius: 5px;
+	font-size: 30px;
+	box-shadow: 1px 1px 1px 1px black;
+}
+
+#move_button:hover {
+	box-shadow: 4px 4px 4px black;
+	color: yellow;
+	font-weight: bolder;
+
+}
+
+#game_over {
+	display: block;
+	background-color: white;
+	width: 557px;
+    position: absolute;
+    top: 180px;
+    left: 415px;
+    height: 343px;
+    border: 10px solid gray;
+    border-radius: 5%;
+	text-align: center;
+}
+
+a {
+	font-weight: bolder;
+	text-decoration :none;	
+	font-size: 50px;
+
+}
+a:hover{
+	text-shadow: 2px 2px 2px gray;
+	font-weight: bolder;
+	color: red;
+}

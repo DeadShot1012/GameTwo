@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Priest And Devil</title>
+	<link rel="icon" type="image/icon" href="image/game.ico">
+	<link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+	<style>
+		<%include ./css/indexscript %>
+		
+		.tile {
+			    background: lightgoldenrodyellow;
+			    width: 92%;
+			    height: 50px;
+			    display: block;
+			    font-size: 30px;
+			    border: 2px solid darkgray;
+			    border-radius: 5px;
+		}
+		#sno {
+			    padding: 1px;
+   				display: inline-block;
+    			width: 5%;
+		}
+		#name {
+			    padding: 10px;
+    			display: inline-block;
+    			width: 70%;
+		}
+		#Logout {
+			font-size: 25px;
+		    background-color: lightgoldenrodyellow;
+		    color: darkgreen;
+		    padding: 2px;
+		    margin: 5px;
+		    border-radius: 5px;
+		}
+	</style>
+</head>
+<body>
+	
+		<div id="main" style="visibility: visible;">
+			<div class="header">
+			
+				<h2>Monster And Priest</h2>
+				<a href="/game"><img src="<%= id.photo %>" height="45px" width="45px" style="border-radius: 5px; padding-top: 5px"/></a>
+				<a href="/logout" id="Logout"> Logout </a>
+			</div>
+
+		<div id="leaderboard" style="display:block;;padding: 50px;">
+			<div class="tile" style="font-size: 35px;font-family: bold">
+				<span id="sno">S.No</span>
+					<span id ='name'>Name</span>
+				<span id='sno'>Time</span>
+			</div>
+			<% for(var i=0; i < data.length; i++) { %>
+			<% if(data[i]._id==id.id){%>
+				<div class="tile" style="background-color: red">
+					<img src="<%= data[i].photo %>"	 style="width: 40px;height: 40px;border-radius: 50%;width: 5%;padding-top: 3px;margin: 0px "/>
+					<span id="sno"><%= i+1 %></span>
+					<span id ='name'><%= data[i].name %></span>
+					<span id='sno'><%= data[i].time %> </span>
+				</div>
+				<%} else {%>
+				<div class="tile">
+					<img src="<%= data[i].photo %>"	 style="width: 40px;height: 40px;border-radius: 50%;width: 5%;padding-top: 3px;margin: 0px "/>
+					<span id="sno"><%= i+1 %></span>
+					<span id ='name'><%= data[i].name %></span>
+					<span id='sno'><%= data[i].time %> </span>
+				</div>
+				<%}%>
+
+			<% } %>
+			<br>
+				<div class="tile" style="background-color: red">
+					<img src="<%= id.photo %>"	 style="width: 40px;height: 40px;border-radius: 50%;width: 5%;padding-top: 3px;margin: 0px "/>
+					<span id="sno"></span>
+					<span id ='name'><%= id.name %></span>
+					<span id='sno'><%= id.time %> </span>
+				</div>
+						
+		</div>
+		</div>
+</body>
+
+</html>
+

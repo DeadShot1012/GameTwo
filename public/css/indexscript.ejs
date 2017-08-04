@@ -1,0 +1,100 @@
+body{
+	margin: 0px!important;
+	padding: 0px!important;
+	font-family: 'Indie Flower', cursive;
+	text-align: center;
+	background-color: green;
+	line-height: 25px;
+}
+a {
+	font-weight: bolder;
+	font-size: 25px;
+	text-decoration :none;	
+	color: white;
+
+}
+.header h2 {
+	margin: auto;
+	color : white;
+}
+input {
+	width: 70%;
+	text-align: center;
+	background-color: white;
+}
+.header{
+	text-align: center;
+	align-items: center;
+	font-size: 25px;
+	display: flex;
+	margin: auto;
+	background-color: darkgreen;
+	height: 50px;
+	box-shadow: 5px 5px 5px black;
+	
+}
+a:hover{
+	text-shadow: 2px 2px 2px gray;
+	font-weight: bolder;
+	color: red;
+}
+
+#submit {
+	font-weight: bolder;
+	text-decoration :none;	
+	color: white;	
+	background-color: darkgreen;
+	font-size: 30px;
+	font-family: 'Indie Flower', cursive;
+}
+
+#submit:hover{
+	text-shadow: 2px 2px 2px gray;
+	font-weight: bolder;
+	color: red;
+}
+
+#main {
+	margin: 0%;
+	padding: 0%;
+	width: 100%;
+	visibility: hidden;
+	position: absolute;
+	width: 100%;
+}
+#loader {
+	background-color: darkgreen;
+	display: block;
+	font-size: 35px;
+}
+#loader div {
+	margin: auto;
+	padding: 0.1%;
+}
+
+
+.loading {
+	border: 10px solid #f3f3f3;
+  	border-radius: 50%;
+  	border-top: 40px solid #bfff00;
+  	animation: spin 2s linear infinite;
+  	width: 20%;
+}
+
+.loader_image {
+	padding: 12% 1%;
+	animation: logo_spin 2s linear infinite;
+	width: 90%;
+	height: 70%;
+
+}
+
+@keyframes spin {
+  00% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes logo_spin {
+  100% { transform: rotate(0deg); }
+  00% { transform: rotate(360deg); }
+}

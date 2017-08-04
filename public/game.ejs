@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Priest And Devil</title>
+	<link rel="icon" type="image/icon" href="image/game.ico">
+	<link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+	<style>
+		<%include ./css/mainscript %>
+		#name {
+			position: absolute;
+			font-size: 28px;
+			left : 140px;
+			top: 190px;
+		}
+		#Logout {
+			font-size: 25px;
+		    background-color: lightgoldenrodyellow;
+		    color: darkgreen;
+		    padding: 2px;
+		    margin: 5px;
+		    border-radius: 5px;
+		}
+
+
+	</style>
+</head>
+<body>
+	<div>
+
+
+		<div id="main">
+			<div class="header">
+				<h2>Timer :</h2>
+				<h2 id="timer">00:00</h2>
+				<h2>sec</h2>
+				
+				<a href="/leaderboard/<%=id%>"><img src="<%= photo %>" height="45px" width="45px" style="border-radius: 5px; padding-top: 25px"/></a>
+				<a href="/logout" id="Logout"> Logout </a>
+			</div>
+
+
+<div id ="game">
+		<span id="name" style="left : 180px">Welcome!!!</span>
+		<span id="name" style="top: 220px"> <%= name %></span>
+		
+		<img src="http://localhost:8086/image/birds.gif" id="birds" height="100" />
+		<img class="image" src="http://localhost:8086/image/monster.gif" id="m3" onclick="on_click(this.id)" />
+		<img class="image" src="http://localhost:8086/image/monster.gif" id="m2" onclick="on_click(this.id)" />
+		<img class="image" src="http://localhost:8086/image/monster.gif" id="m1" onclick="on_click(this.id)" />
+		<img class="image" src="http://localhost:8086/image/priest.gif" id="p3" onclick="on_click(this.id)" />
+		<img class="image" src="http://localhost:8086/image/priest.gif" id="p2" onclick="on_click(this.id)" />
+		<img class="image" src="http://localhost:8086/image/priest.gif" id="p1"  onclick="on_click(this.id)" />
+		<img src="http://localhost:8086/image/boat.png" id="boat" class="image" style="left: 700px;">
+		
+		<div id="game_over" style="visibility: hidden;">
+			<img src="http://localhost:8086/image/game_over.png" class="game_over" id="game_op"/>
+			<form action="http://localhost:8086/submit" method="POST"> 
+			
+				<input name="time" type=text value="00:00" style="display: none" id="time">
+				<input name="id" type=text value="<%= _id %>" style="display: none">
+				<input type="submit" value="Replay" id="title">				
+			</form>
+			
+		</div>
+		<a type="button" id="move_button" onclick="move_button()">MOVE</a>
+	</div>
+	<script type="text/javascript" src="http://localhost:8086/js/main.js">
+	</script>
+	
+</body>
+</html>
